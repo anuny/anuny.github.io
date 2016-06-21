@@ -1,6 +1,6 @@
 var hasPushstate = !!(window.history && history.pushState);
 // duoshuo load function
-var duoshuoName = 'yuche'; // change to your DUOSHUO name
+var duoshuoName = 'yesji'; // change to your DUOSHUO name
 var duoshuoQuery = {short_name: duoshuoName}; // change to your duoshuo name
 function toggleDuoshuoComments(container) {
     var el = document.createElement('div');
