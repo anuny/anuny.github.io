@@ -1,0 +1,146 @@
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+    <channel>
+    <title>意思集</title>
+    <link>/blog/dist/</link>
+    <atom:link href="/blog/dist/rss.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <description>意思集：杨飞的个人博客，记录生活，原创文学，分享影视，音乐，读书，美食等有意思的内容！</description>
+    <lastBuildDate>Sat Nov 10 2018 22:14:50 GMT+0800 (中国标准时间)</lastBuildDate>
+    <pubDate>Sat Nov 10 2018 22:14:50 GMT+0800 (中国标准时间)</pubDate>
+  
+    <item>
+    <title>文章1</title>
+    <link>/blog/dist/post/4b83a5b60276aee0.html</link>
+    <guid>4b83a5b60276aee0</guid>
+    <pubDate>Mon Nov 06 2017 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<h1 id="-">文章</h1>
+]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<h1 id="-">文章</h1>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章11111111111</title>
+    <link>/blog/dist/post/5293154f25cffda3.html</link>
+    <guid>5293154f25cffda3</guid>
+    <pubDate>Tue Nov 06 2018 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<h1 id="-">文章</h1>
+<]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<h1 id="-">文章</h1>
+<p><img src="/blog/dist/assets/5293154f25cffda3/banner.jpg" alt="avatar"></p>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章2</title>
+    <link>/blog/dist/post/bddb7b9097a1aa50.html</link>
+    <guid>bddb7b9097a1aa50</guid>
+    <pubDate>Thu Nov 08 2018 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<p>在我印象中，乙一一直是一位传奇「作]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<p>在我印象中，乙一一直是一位传奇「作家」，他的作品并不多，但只要搜索「日本有哪些著名推理作家」，他总是很容易进入视线。</p>
+<p>这是一位没有流派的作家，你也可以理解为：我不觉得他的作品适合被划分到哪个流派。这一点，东野圭吾也是一样。不同的是，东野圭吾是一个尽可能尝试多种类型的试验派作家。乙一，则是贯彻如一的味道，哪怕纵横现实与幻想。拿起他的文字，读完后，头脑里、心肺里沉淀着久久不能散去的味道，一嗅，便知来自乙一。</p>
+
+
+<pre><code class="language-javascript">const rMatter = /^(-{3,}|;{3,})\n([\s\S]+?)\n\1(?:$|\n([\s\S]*)$)/
+const rExcerpt = /&lt;!--+\s*more\s*--+&gt;/i;
+
+const marked = require(&#39;marked&#39;)
+marked.setOptions({
+  gfm: true,
+  langPrefix: &#39;language-&#39;
+})
+
+function matter(source) {
+    let ret,data,excerpt
+  let content = source.replace(/\r/g,&#39;&#39;)
+  if (rMatter.test(content)){
+    const match = content.match(rMatter);
+    data = match[2]
+    content = match[3] || &#39;&#39;
+  }
+
+  content = marked(content)
+
+  if (rExcerpt.test(content)) {
+    content = content.replace(rExcerpt, (match, index) =&gt; {
+      excerpt = content.substring(0, index).trim();
+      return &#39;&#39;
+    });
+  }
+
+  ret = {
+    source,
+      content,
+      excerpt
+  }
+
+  if (!data){
+    return ret
+  }
+  data = data.trim()+&#39;\n&#39;
+  let info = {}
+  const matchs = data.match(/(.*)\n/g);
+  matchs.forEach( match =&gt; {
+    match = match.trim()
+    let arr = match.split(&#39;:&#39;)
+    info[arr[0]] = arr[1].replace(&#39;\n&#39;,&#39;&#39;)
+  })
+  if(!info.date){
+    info.date = new Date();
+  }
+  ret.info = info
+  return ret
+}
+
+module.exports = matter</code></pre>
+<p>文章正文</p>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章3</title>
+    <link>/blog/dist/post/f68dd11fa8bf96c1.html</link>
+    <guid>f68dd11fa8bf96c1</guid>
+    <pubDate>Sat Nov 10 2018 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<p>在我印象中，乙一一直是一位传奇「作]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<p>在我印象中，乙一一直是一位传奇「作家」，他的作品并不多，但只要搜索「日本有哪些著名推理作家」，他总是很容易进入视线。</p>
+<p>这是一位没有流派的作家，你也可以理解为：我不觉得他的作品适合被划分到哪个流派。这一点，东野圭吾也是一样。不同的是，东野圭吾是一个尽可能尝试多种类型的试验派作家。乙一，则是贯彻如一的味道，哪怕纵横现实与幻想。拿起他的文字，读完后，头脑里、心肺里沉淀着久久不能散去的味道，一嗅，便知来自乙一。</p>
+
+
+<p>文章正文</p>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章1</title>
+    <link>/blog/dist/post/29a07c8b2fd6a8af.html</link>
+    <guid>29a07c8b2fd6a8af</guid>
+    <pubDate>Mon Nov 06 2017 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<h1 id="-">文章</h1>
+]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<h1 id="-">文章</h1>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章1</title>
+    <link>/blog/dist/post/2b7c4abb10aa8472.html</link>
+    <guid>2b7c4abb10aa8472</guid>
+    <pubDate>Mon Nov 06 2017 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<h1 id="-">文章</h1>
+]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<h1 id="-">文章</h1>
+]]></content:encoded>
+    </item>
+    <item>
+    <title>文章1</title>
+    <link>/blog/dist/post/bef593bfffb2e0f7.html</link>
+    <guid>bef593bfffb2e0f7</guid>
+    <pubDate>Mon Nov 06 2017 00:00:00 GMT+0800 (中国标准时间)</pubDate><author>yangfei88@live.cn</author><dc:creator>云泽</dc:creator>
+    <description><![CDATA[<h1 id="-">文章</h1>
+]]></description>
+    <content:encoded xml:lang="zh-CN"><![CDATA[<h1 id="-">文章</h1>
+]]></content:encoded>
+    </item></channel></rss>
