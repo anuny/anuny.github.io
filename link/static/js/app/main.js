@@ -291,7 +291,7 @@ var user = {
     login: function () {
         $.ajax({
             type: "POST",
-            url: "http://106.75.172.177/link/login.php",
+            url: "https://106.75.172.177/link/login.php",
             success: function (msg) {
                 if (msg) {
                     editMenu.great();
@@ -305,7 +305,7 @@ var user = {
         var cookiename = 'SAFDGhjklJH4565';
         $.ajax({
             type: "POST",
-            url: "http://106.75.172.177/link/login.php",
+            url: "https://106.75.172.177/link/login.php",
             data: {
                 dc: cookiename
             },
@@ -392,7 +392,7 @@ var editMenu = {
                 var pass = $('#pas').val();
                 $.ajax({
                     type: "POST",
-                    url: "http://106.75.172.177/link/login.php",
+                    url: "https://106.75.172.177/link/login.php",
                     data: {
                         pwd: pass
                     },
