@@ -1,7 +1,7 @@
 var conn = '';
 var database = {
     connect: function (c) {
-        conn = c
+        conn = 'https://www.thankwork.cn/link/'+c
     }
 };
 var layout = {
