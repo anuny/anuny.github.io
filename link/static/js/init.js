@@ -18,7 +18,7 @@ seajs.use('main',
 		$(window).resize(function() {
 			layout.mainWidth($('.menu'), $('.container'));
 		});
-		data.ajax('https://www.thankwork.cn/link/data.json');	
+		data.ajax('http://www.thankwork.cn/link/data.json');	
 		user.login();
 		var len=$('#main>li>ul>li').length;
 		var tit=$('title');
