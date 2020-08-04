@@ -1,7 +1,7 @@
 var conn = '';
 var database = {
     connect: function (c) {
-        conn = 'https://www.thankwork.cn/link/'+c
+        conn = 'http://www.thankwork.cn/link/'+c
     }
 };
 var layout = {
@@ -291,7 +291,7 @@ var user = {
     login: function () {
         $.ajax({
             type: "POST",
-            url: "https://www.thankwork.cn/link/login.php",
+            url: "http://www.thankwork.cn/link/login.php",
             success: function (msg) {
                 if (msg) {
                     editMenu.great();
@@ -305,7 +305,7 @@ var user = {
         var cookiename = 'SAFDGhjklJH4565';
         $.ajax({
             type: "POST",
-            url: "https://www.thankwork.cn/link/login.php",
+            url: "http://www.thankwork.cn/link/login.php",
             data: {
                 dc: cookiename
             },
